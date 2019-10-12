@@ -3,6 +3,21 @@ var util = require("mdast-util-toc");
 // const fs = require("fs");
 const yaml = require("js-yaml");
 
+const strToCamel = str => {
+  return str.replace(/-(.)/g, (match, chr) => chr.toUpperCase());
+};
+
+const keysToCamel = obj => {
+  if (obj) {
+    const newObj = {};
+    Object.keys(obj).forEach(k => {
+      newObj[strToCamel(k)] = obj[k];
+    });
+    return newObj;
+  }
+  return obj;
+};
+
 const transformer = (markdownAST, pluginOptions) => {
   // fs.writeFileSync("./data-before.json", JSON.stringify(markdownAST, null, 2));
 
@@ -17,15 +32,15 @@ const transformer = (markdownAST, pluginOptions) => {
   }
 
   let prefs = {
-    ...pluginOptions,
     tight: false,
-    "from-heading": 2,
-    "to-heading": 6
+    fromHeading: 2,
+    toHeading: 6,
+    ...keysToCamel(pluginOptions)
   };
 
   try {
     let parsePrefs = yaml.safeLoad(markdownAST.children[index].value);
-    prefs = { ...prefs, ...parsePrefs };
+    prefs = { ...prefs, ...keysToCamel(parsePrefs) };
   } catch (e) {
     console.log("Can't parse TOC-Configuration", e);
   }
@@ -40,14 +55,14 @@ const transformer = (markdownAST, pluginOptions) => {
 
   // add all headings
   markdownAST.children.forEach(node => {
-    if (node.type === "heading" && node.depth > prefs["from-heading"] - 1) {
+    if (node.type === "heading" && node.depth > prefs.fromHeading - 1) {
       tocMarkdownAST.children.push(node);
     }
   });
 
   // calculate TOC
   var result = util(tocMarkdownAST, {
-    maxDepth: prefs["to-heading"],
+    maxDepth: prefs.toHeading,
     tight: prefs.tight,
     skip: prefs.skip
   });
