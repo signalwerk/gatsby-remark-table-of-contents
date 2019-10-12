@@ -1,4 +1,3 @@
-const visit = require("unist-util-visit");
 var util = require("mdast-util-toc");
 // const fs = require("fs");
 const yaml = require("js-yaml");
