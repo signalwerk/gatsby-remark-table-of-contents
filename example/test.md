@@ -3,7 +3,7 @@
 ## Table of Contents
 
 ```toc
-skip: Table of Contents
+exclude: Table of Contents
 from-heading: 2
 to-heading: 6
 ```

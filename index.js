@@ -63,7 +63,7 @@ const transformer = (markdownAST, pluginOptions) => {
   var result = util(tocMarkdownAST, {
     maxDepth: prefs.toHeading,
     tight: prefs.tight,
-    skip: prefs.skip
+    skip: prefs.exclude
   });
 
   // insert the TOC≤

@@ -12,10 +12,10 @@ npm i gatsby-remark-table-of-contents
 ```
 
 ## Options
-### `skip`
+### `exclude`
 
 `string?` — default: `''`  
-Skip titles matching this string (wrapped in `new RegExp('^(' + value + ')$', 'i')`).
+Exclude titles matching this string (wrapped in `new RegExp('^(' + value + ')$', 'i')`).
 
 ### `tight`
 
@@ -49,7 +49,7 @@ If you like to overwrite the global settings in place (camelCase or kebab-case):
 ````md
 ```toc
 # This code block gets replaced with the TOC
-skip: Table of Contents
+exclude: Table of Contents
 tight: false,
 from-heading: 2
 to-heading: 6
@@ -69,7 +69,7 @@ module.exports = ({ root }) => ({
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
-              skip: "Table of Contents",
+              exclude: "Table of Contents",
               tight: false,
               fromHeading: 1,
               toHeading: 6
@@ -92,7 +92,7 @@ module.exports = ({ root }) => ({
 ## Table of Contents
 
 ```toc
-skip: Table of Contents
+exclude: Table of Contents
 from-heading: 2
 to-heading: 6
 ```
