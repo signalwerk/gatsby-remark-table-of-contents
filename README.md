@@ -1,4 +1,7 @@
 # Table of Contents in Gatsby
+
+[![Downloads][downloads-badge]][downloads]
+
 [Gatsby][gatsby] plugin using [remark][remark] to generate a Table of Contents in markdown.
 
 
@@ -131,5 +134,6 @@ to-heading: 6
 [gatsby]: https://www.gatsbyjs.org/
 [remark]: https://github.com/remarkjs/remark
 [downloads]: https://www.npmjs.com/package/gatsby-remark-table-of-contents
+[downloads-badge]: https://img.shields.io/npm/v/gatsby-remark-table-of-contents.svg
 [license]: https://opensource.org/licenses/MIT
 [author]: http://signalwerk.ch/
