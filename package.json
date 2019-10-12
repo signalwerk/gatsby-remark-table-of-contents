@@ -13,6 +13,7 @@
   "keywords": [
     "gatsby",
     "remark",
+    "gatsby-plugin",
     "toc"
   ],
   "author": "Stefan Huber, Signalwerk GmbH",
