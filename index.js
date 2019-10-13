@@ -2,10 +2,12 @@ var util = require("mdast-util-toc");
 // const fs = require("fs");
 const yaml = require("js-yaml");
 
+// convert "in-string" to "inString"
 const strToCamel = str => {
   return str.replace(/-(.)/g, (match, chr) => chr.toUpperCase());
 };
 
+// convert "{'in-key': val}" to "{'inKey': val}"
 const keysToCamel = obj => {
   if (obj) {
     const newObj = {};

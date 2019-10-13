@@ -10,7 +10,7 @@ const toc = () => {
     gatsbyTOC(
       { markdownAST },
       {
-        skip: "Table of Contents",
+        exclude: "Table of Contents",
         tight: false,
         fromHeading: 1,
         toHeading: 6
