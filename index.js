@@ -1,5 +1,4 @@
 var util = require("mdast-util-toc");
-// const fs = require("fs");
 const yaml = require("js-yaml");
 
 // convert "in-string" to "inString"
@@ -20,8 +19,6 @@ const keysToCamel = obj => {
 };
 
 const transformer = (markdownAST, pluginOptions) => {
-  // fs.writeFileSync("./data-before.json", JSON.stringify(markdownAST, null, 2));
-
   // find position of TOC
   const index = markdownAST.children.findIndex(
     node => node.type === "code" && node.lang === "toc"
@@ -82,8 +79,6 @@ const transformer = (markdownAST, pluginOptions) => {
     },
     markdownAST.children.slice(index + 1)
   );
-
-  // fs.writeFileSync("./data-after.json", JSON.stringify(markdownAST, null, 2));
 };
 
 module.exports = ({ markdownAST }, pluginOptions) => {

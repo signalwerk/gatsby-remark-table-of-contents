@@ -1,12 +1,15 @@
 var remark = require("remark");
 var gatsbyTOC = require("../");
-
 const fs = require("fs");
 
 let data = fs.readFileSync("./test.md");
 
 const toc = () => {
-  return markdownAST =>
+  return markdownAST => {
+    fs.writeFileSync(
+      "./data-before.json",
+      JSON.stringify(markdownAST, null, 2)
+    );
     gatsbyTOC(
       { markdownAST },
       {
@@ -16,6 +19,8 @@ const toc = () => {
         toHeading: 6
       }
     );
+    fs.writeFileSync("./data-after.json", JSON.stringify(markdownAST, null, 2));
+  };
 };
 
 remark()
