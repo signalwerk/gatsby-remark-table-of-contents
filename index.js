@@ -69,7 +69,15 @@ const transformer = (markdownAST, pluginOptions) => {
   // insert the TOC≤
   markdownAST.children = [].concat(
     markdownAST.children.slice(0, index),
+    {
+      type: "html",
+      value: '<div class="toc">'
+    },
     result.map,
+    {
+      type: "html",
+      value: '</div">'
+    },
     markdownAST.children.slice(index + 1)
   );
 
