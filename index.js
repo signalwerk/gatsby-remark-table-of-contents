@@ -75,7 +75,7 @@ const transformer = (markdownAST, pluginOptions) => {
     result.map,
     {
       type: "html",
-      value: '</div">'
+      value: '</div>'
     },
     markdownAST.children.slice(index + 1)
   );
