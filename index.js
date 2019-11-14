@@ -1,4 +1,4 @@
-var util = require("mdast-util-toc");
+const util = require("mdast-util-toc");
 const yaml = require("js-yaml");
 
 // convert "in-string" to "inString"
@@ -59,7 +59,7 @@ const transformer = (markdownAST, pluginOptions) => {
   });
 
   // calculate TOC
-  var result = util(tocMarkdownAST, {
+  const result = util(tocMarkdownAST, {
     maxDepth: prefs.toHeading,
     tight: prefs.tight,
     skip: prefs.exclude
@@ -75,7 +75,7 @@ const transformer = (markdownAST, pluginOptions) => {
     result.map,
     {
       type: "html",
-      value: '</div>'
+      value: "</div>"
     },
     markdownAST.children.slice(index + 1)
   );
