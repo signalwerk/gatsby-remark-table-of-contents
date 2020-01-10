@@ -14,8 +14,9 @@ npm i gatsby-remark-table-of-contents
 ## Options
 ### `exclude`
 
-`string?` — default: `''`  
-Exclude titles matching this string (wrapped in `new RegExp('^(' + value + ')$', 'i')`).
+`string? | array?` — default: `''`  
+Exclude titles matching this string (`new RegExp('^(' + string + ')$', 'i')`).
+If an array is passed the array gets joined with a pipe (`new RegExp('^(' + array.join('|') + ')$', 'i')`).
 
 ### `tight`
 
@@ -137,3 +138,8 @@ to-heading: 6
 [downloads-badge]: https://img.shields.io/npm/v/gatsby-remark-table-of-contents.svg
 [license]: https://opensource.org/licenses/MIT
 [author]: http://signalwerk.ch/
+
+
+## Version
+
+- **0.0.9** – ADD: Multiple excludes can now be defined by arrays
