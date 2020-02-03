@@ -88,7 +88,7 @@ module.exports = ({ root }) => ({
 ### Input
 
 ````md
-# Headlinge 1.0.0
+# Headline 1.0.0
 
 ## Table of Contents
 
@@ -108,7 +108,7 @@ to-heading: 6
 ### Output
 
 ````md
-# Headlinge 1.0.0
+# Headline 1.0.0
 
 ## Table of Contents
 
