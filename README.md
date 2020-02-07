@@ -11,6 +11,27 @@
 npm i gatsby-remark-table-of-contents
 ```
 
+## Use
+Generate a table of contents:
+
+````md
+```toc
+# This code block gets replaced with the TOC
+```
+````
+
+If you like to overwrite the global settings in place (camelCase or kebab-case):
+
+````md
+```toc
+# This code block gets replaced with the TOC
+exclude: Table of Contents
+tight: false,
+from-heading: 2
+to-heading: 6
+```
+````
+
 ## Options
 ### `exclude`
 
@@ -35,27 +56,6 @@ Minimum heading depth to include.
 `number?` — default: `6`  
 Maximum heading depth to include.
 
-
-## Use
-Generate a table of contents:
-
-````md
-```toc
-# This code block gets replaced with the TOC
-```
-````
-
-If you like to overwrite the global settings in place (camelCase or kebab-case):
-
-````md
-```toc
-# This code block gets replaced with the TOC
-exclude: Table of Contents
-tight: false,
-from-heading: 2
-to-heading: 6
-```
-````
 
 ## Global Configuration
 Global configurations can be set in `gatsby-config.js`.
