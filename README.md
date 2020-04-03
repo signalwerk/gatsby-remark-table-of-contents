@@ -4,11 +4,47 @@
 
 [Gatsby][gatsby] plugin using [remark][remark] to generate a Table of Contents in markdown.
 
-
 ## Installation
 
+### Requirements
+
+This plugin requires [gatsby-remark-autolink-headers](https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/) to generate the anchor links. 
+
 ```sh
-npm i gatsby-remark-table-of-contents
+npm i --save gatsby-remark-autolink-headers
+```
+
+### Install gatsby-remark-table-of-contents
+
+```sh
+npm i --save gatsby-remark-table-of-contents
+```
+
+### Global Configuration
+Global configurations should be set in `gatsby-config.js`.
+
+```js
+module.exports = ({ root }) => ({
+  plugins: [
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              fromHeading: 1,
+              toHeading: 6
+            },
+            `gatsby-remark-autolink-headers`
+          }
+        ],
+      },
+    },
+  ],
+})
 ```
 
 ## Use
@@ -55,33 +91,6 @@ Minimum heading depth to include.
 
 `number?` — default: `6`  
 Maximum heading depth to include.
-
-
-## Global Configuration
-Global configurations can be set in `gatsby-config.js`.
-
-```js
-module.exports = ({ root }) => ({
-  plugins: [
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: false,
-              fromHeading: 1,
-              toHeading: 6
-            },
-          }
-        ],
-      },
-    },
-  ],
-})
-```
 
 ## Example
 
