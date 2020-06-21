@@ -38,8 +38,8 @@ module.exports = ({ root }) => ({
               fromHeading: 1,
               toHeading: 6
             },
-            `gatsby-remark-autolink-headers`
-          }
+          },
+          `gatsby-remark-autolink-headers`
         ],
       },
     },
