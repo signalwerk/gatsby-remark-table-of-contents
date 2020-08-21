@@ -143,7 +143,7 @@ to-heading: 6
 
 ## License
 
-[MIT][license] – [Stefan Huber][author]
+[MIT][license]
 
 <!-- Definitions -->
 
@@ -158,4 +158,5 @@ to-heading: 6
 
 ## Version
 
+- **0.1.0** – ADD: Option to set Class-Name
 - **0.0.9** – ADD: Multiple excludes can now be defined by arrays
