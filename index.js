@@ -33,6 +33,7 @@ const transformer = (markdownAST, pluginOptions) => {
     tight: false,
     fromHeading: 2,
     toHeading: 6,
+    className: "toc",
     ...keysToCamel(pluginOptions)
   };
 
@@ -41,6 +42,11 @@ const transformer = (markdownAST, pluginOptions) => {
     prefs = { ...prefs, ...keysToCamel(parsePrefs) };
   } catch (e) {
     console.log("Can't parse TOC-Configuration", e);
+  }
+  
+  // For XSS safety, we only allow basic css names
+  if (!prefs.className.match(/^[ a-zA-Z0-9_-]*$/)) {
+    prefs.className = "toc";
   }
 
   // this ist the ast we nned consider
@@ -70,7 +76,7 @@ const transformer = (markdownAST, pluginOptions) => {
     markdownAST.children.slice(0, index),
     {
       type: "html",
-      value: '<div class="toc">'
+      value: '<div class="' + prefs.className + '">'
     },
     result.map,
     {
