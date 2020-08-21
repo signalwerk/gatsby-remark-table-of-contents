@@ -36,7 +36,8 @@ module.exports = ({ root }) => ({
               exclude: "Table of Contents",
               tight: false,
               fromHeading: 1,
-              toHeading: 6
+              toHeading: 6,
+              className: "table-of-contents"
             },
           },
           `gatsby-remark-autolink-headers`
@@ -65,6 +66,7 @@ exclude: Table of Contents
 tight: false,
 from-heading: 2
 to-heading: 6
+class-name: "table-of-contents"
 ```
 ````
 
@@ -92,7 +94,7 @@ Minimum heading depth to include.
 `number?` — default: `6`  
 Maximum heading depth to include.
 
-### `toHeading`
+### `className`
 
 `string?` — default: `toc`  
 Set the `class`-name of the generated div.
