@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-table-of-contents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "gatsby remark plugin to generate table of contents",
   "main": "index.js",
   "scripts": {
