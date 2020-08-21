@@ -37,3 +37,4 @@ let writeSnapshots = testName => {
 
 writeSnapshots("single-excludes");
 writeSnapshots("multiple-excludes");
+writeSnapshots("set-class");

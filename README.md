@@ -8,7 +8,7 @@
 
 ### Requirements
 
-This plugin requires [gatsby-remark-autolink-headers](https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/) to generate the anchor links. 
+This plugin requires [gatsby-remark-autolink-headers](https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/) to generate the anchor links.
 
 ```sh
 npm i --save gatsby-remark-autolink-headers
@@ -91,6 +91,11 @@ Minimum heading depth to include.
 
 `number?` — default: `6`  
 Maximum heading depth to include.
+
+### `toHeading`
+
+`string?` — default: `toc`  
+Set the `class`-name of the generated div.
 
 ## Example
 
