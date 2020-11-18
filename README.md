@@ -141,7 +141,7 @@ to-heading: 6
 ## Headline 1.2.0
 ````
 
-## License & Author
+## License & Authors
 
 [MIT][license] · Started by [signalwerk](https://github.com/signalwerk) supported by [several contributors](https://github.com/signalwerk/gatsby-remark-table-of-contents/graphs/contributors) 
 
