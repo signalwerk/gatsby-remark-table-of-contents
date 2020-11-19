@@ -34,6 +34,7 @@ const transformer = (markdownAST, pluginOptions) => {
     fromHeading: 2,
     toHeading: 6,
     className: "toc",
+    ordered: false,
     ...keysToCamel(pluginOptions)
   };
 
@@ -68,6 +69,7 @@ const transformer = (markdownAST, pluginOptions) => {
   const result = util(tocMarkdownAST, {
     maxDepth: prefs.toHeading,
     tight: prefs.tight,
+    ordered: prefs.ordered,
     skip: Array.isArray(prefs.exclude) ? prefs.exclude.join("|") : prefs.exclude
   });
 
