@@ -35,6 +35,7 @@ module.exports = ({ root }) => ({
             options: {
               exclude: "Table of Contents",
               tight: false,
+              ordered: false,
               fromHeading: 1,
               toHeading: 6,
               className: "table-of-contents"
@@ -82,6 +83,10 @@ If an array is passed the array gets joined with a pipe (`new RegExp('^(' + arra
 `boolean?` — default: `false`  
 Tight list items.
 
+### `ordered`
+
+`boolean?` — default: `false`  
+Creates an ordered list.
 
 ### `fromHeading`
 
