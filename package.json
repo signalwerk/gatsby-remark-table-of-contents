@@ -44,9 +44,11 @@
     "lint": "eslint",
     "build:watch": "rollup -c -w",
     "jest": "jest",
+    "jest:coverage": "npm run jest -- --coverage --coverageReporters='json-summary'",
+    "badge:update": "npm run jest:coverage && npx istanbul-badges-readme",
     "test": "npm run lint && npm run jest",
     "test:watch": "npm run jest -- --watch",
-    "pub": "npm run test && npm run build && npm publish --access=public"
+    "publish": "npm run jest:coverage && npx istanbul-badges-readme && npm run test && npm run build && npm publish"
   },
   "files": [
     "dist"

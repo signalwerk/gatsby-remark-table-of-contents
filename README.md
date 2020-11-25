@@ -1,6 +1,7 @@
 # Table of Contents in Gatsby
 
-[![Downloads][downloads-badge]][downloads]
+[![Downloads][downloads-badge]][downloads] ![Lines](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg)
+
 
 [Gatsby][gatsby] plugin using [remark][remark] to generate a Table of Contents in markdown.
 
