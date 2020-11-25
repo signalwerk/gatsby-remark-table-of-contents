@@ -3,6 +3,23 @@ import { keysToCamel } from "./util/toCamel";
 const util = require("mdast-util-toc");
 const yaml = require("js-yaml");
 
+const defaultPrefs = {
+  tight: false,
+  fromHeading: 2,
+  toHeading: 6,
+  className: "toc",
+  ordered: false,
+};
+
+const parsePrefs = (prefsStrYaml) => {
+  try {
+    return yaml.safeLoad(prefsStrYaml);
+  } catch (e) {
+    console.log("Can't parse TOC-Configuration", e);
+    return {};
+  }
+};
+
 const transformer = (markdownAST, pluginOptions) => {
   // find position of TOC
   const index = markdownAST.children.findIndex(
@@ -15,20 +32,10 @@ const transformer = (markdownAST, pluginOptions) => {
   }
 
   let prefs = {
-    tight: false,
-    fromHeading: 2,
-    toHeading: 6,
-    className: "toc",
-    ordered: false,
+    ...defaultPrefs,
     ...keysToCamel(pluginOptions),
+    ...keysToCamel(parsePrefs(markdownAST.children[index].value)),
   };
-
-  try {
-    const parsePrefs = yaml.safeLoad(markdownAST.children[index].value);
-    prefs = { ...prefs, ...keysToCamel(parsePrefs) };
-  } catch (e) {
-    console.log("Can't parse TOC-Configuration", e);
-  }
 
   // For XSS safety, we only allow basic css names
   if (!prefs.className.match(/^[ a-zA-Z0-9_-]*$/)) {
