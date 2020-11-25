@@ -64,7 +64,8 @@ If you like to overwrite the global settings in place (camelCase or kebab-case):
 ```toc
 # This code block gets replaced with the TOC
 exclude: Table of Contents
-tight: false,
+tight: false
+ordered: false
 from-heading: 2
 to-heading: 6
 class-name: "table-of-contents"
@@ -148,7 +149,7 @@ to-heading: 6
 
 ## License & Authors
 
-[MIT][license] · Started by [signalwerk](https://github.com/signalwerk) supported by [several contributors](https://github.com/signalwerk/gatsby-remark-table-of-contents/graphs/contributors) 
+[MIT][license] · Started by [signalwerk](https://github.com/signalwerk) supported by [several contributors](https://github.com/signalwerk/gatsby-remark-table-of-contents/graphs/contributors)
 
 <!-- Definitions -->
 
@@ -163,5 +164,7 @@ to-heading: 6
 
 ## Version
 
-- **0.1.0** – ADD: Option to set Class-Name
-- **0.0.9** – ADD: Multiple excludes can now be defined by arrays
+- **0.2.0** – ADD: Option to set ordered (author: [@thomasjungblut](https://github.com/thomasjungblut))
+- **0.1.0** – ADD: Option to set Class-Name (author: [@panzerdp](https://github.com/panzerdp))
+- **0.0.9** – ADD: Multiple excludes can now be defined by arrays (author: [@signalwerk](https://github.com/signalwerk))
+- **0.0.1** – Initial release (author: [@signalwerk](https://github.com/signalwerk))

@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TOC function exclude to exclude header 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   [Headline 1.1.1](#headline-111)
+
+        *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function exclude to exclude header 2`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Table of Contents](#table-of-contents)
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function exclude to exclude header 3`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function fromHeading to skip headings 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Headlinge 1.0.0](#headlinge-100)
+
+    *   [Table of Contents](#table-of-contents)
+
+    *   [Headline 1.1.0](#headline-110)
+
+        *   [Headline 1.1.1](#headline-111)
+
+            *   [Headline 1.1.1.0](#headline-1110)
+
+    *   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function fromHeading to skip headings 2`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Table of Contents](#table-of-contents)
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   [Headline 1.1.1](#headline-111)
+
+        *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function illegal toc-definition should not throw an error but take defaults 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Table of Contents](#table-of-contents)
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   [Headline 1.1.1](#headline-111)
+
+        *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function ordered to ordered toc 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+1.  [Table of Contents](#table-of-contents)
+
+2.  [Headline 1.1.0](#headline-110)
+
+    1.  [Headline 1.1.1](#headline-111)
+
+        1.  [Headline 1.1.1.0](#headline-1110)
+
+3.  [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function ordered to ordered toc 2`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+1.  [Table of Contents](#table-of-contents)
+2.  [Headline 1.1.0](#headline-110)
+    1.  [Headline 1.1.1](#headline-111)
+        1.  [Headline 1.1.1.0](#headline-1110)
+3.  [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function set class of toc 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"my-toc my-toc--mod\\">
+
+*   [Table of Contents](#table-of-contents)
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   [Headline 1.1.1](#headline-111)
+
+        *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function set class of toc 2`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Table of Contents](#table-of-contents)
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   [Headline 1.1.1](#headline-111)
+
+        *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function tight to tight toc 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Table of Contents](#table-of-contents)
+*   [Headline 1.1.0](#headline-110)
+    *   [Headline 1.1.1](#headline-111)
+        *   [Headline 1.1.1.0](#headline-1110)
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function tight to tight toc 2`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Table of Contents](#table-of-contents)
+
+*   [Headline 1.1.0](#headline-110)
+
+    *   [Headline 1.1.1](#headline-111)
+
+        *   [Headline 1.1.1.0](#headline-1110)
+
+*   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function toHeading to skip headings 1`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Headlinge 1.0.0](#headlinge-100)
+
+    *   [Table of Contents](#table-of-contents)
+    *   [Headline 1.1.0](#headline-110)
+    *   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
+
+exports[`TOC function toHeading to skip headings 2`] = `
+"# Headlinge 1.0.0
+
+## Table of Contents
+
+<div class=\\"toc\\">
+
+*   [Headlinge 1.0.0](#headlinge-100)
+
+    *   [Table of Contents](#table-of-contents)
+
+    *   [Headline 1.1.0](#headline-110)
+
+        *   [Headline 1.1.1](#headline-111)
+
+    *   [Headline 1.2.0](#headline-120)
+
+</div>
+
+## Headline 1.1.0
+
+### Headline 1.1.1
+
+#### Headline 1.1.1.0
+
+## Headline 1.2.0
+"
+`;
