@@ -280,6 +280,732 @@ exports[`TOC function set class of toc 2`] = `
 "
 `;
 
+exports[`TOC function set type of toc to mdx 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 3,
+              "offset": 19,
+            },
+            "start": Object {
+              "column": 3,
+              "line": 3,
+              "offset": 4,
+            },
+          },
+          "type": "text",
+          "value": "Headlinge 1.0.0",
+        },
+      ],
+      "depth": 1,
+      "position": Object {
+        "end": Object {
+          "column": 18,
+          "line": 3,
+          "offset": 19,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 2,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 21,
+              "line": 5,
+              "offset": 41,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 5,
+              "offset": 24,
+            },
+          },
+          "type": "text",
+          "value": "Table of Contents",
+        },
+      ],
+      "depth": 2,
+      "position": Object {
+        "end": Object {
+          "column": 21,
+          "line": 5,
+          "offset": 41,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 21,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "type": "jsx",
+      "value": "<div className=\\"toc\\">",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Table of Contents",
+                    },
+                  ],
+                  "title": null,
+                  "type": "link",
+                  "url": "#table-of-contents",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "spread": false,
+          "type": "listItem",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Headline 1.1.0",
+                    },
+                  ],
+                  "title": null,
+                  "type": "link",
+                  "url": "#headline-110",
+                },
+              ],
+              "type": "paragraph",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "type": "text",
+                              "value": "Headline 1.1.1",
+                            },
+                          ],
+                          "title": null,
+                          "type": "link",
+                          "url": "#headline-111",
+                        },
+                      ],
+                      "type": "paragraph",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "children": Array [
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "type": "text",
+                                      "value": "Headline 1.1.1.0",
+                                    },
+                                  ],
+                                  "title": null,
+                                  "type": "link",
+                                  "url": "#headline-1110",
+                                },
+                              ],
+                              "type": "paragraph",
+                            },
+                          ],
+                          "spread": false,
+                          "type": "listItem",
+                        },
+                      ],
+                      "ordered": false,
+                      "spread": false,
+                      "type": "list",
+                    },
+                  ],
+                  "spread": true,
+                  "type": "listItem",
+                },
+              ],
+              "ordered": false,
+              "spread": true,
+              "type": "list",
+            },
+          ],
+          "spread": true,
+          "type": "listItem",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Headline 1.2.0",
+                    },
+                  ],
+                  "title": null,
+                  "type": "link",
+                  "url": "#headline-120",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "spread": false,
+          "type": "listItem",
+        },
+      ],
+      "ordered": false,
+      "spread": true,
+      "type": "list",
+    },
+    Object {
+      "type": "jsx",
+      "value": "</div>",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 13,
+              "offset": 119,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 13,
+              "offset": 105,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.1.0",
+        },
+      ],
+      "depth": 2,
+      "position": Object {
+        "end": Object {
+          "column": 18,
+          "line": 13,
+          "offset": 119,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 13,
+          "offset": 102,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 19,
+              "line": 15,
+              "offset": 139,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 15,
+              "offset": 125,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.1.1",
+        },
+      ],
+      "depth": 3,
+      "position": Object {
+        "end": Object {
+          "column": 19,
+          "line": 15,
+          "offset": 139,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 15,
+          "offset": 121,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 22,
+              "line": 16,
+              "offset": 161,
+            },
+            "start": Object {
+              "column": 6,
+              "line": 16,
+              "offset": 145,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.1.1.0",
+        },
+      ],
+      "depth": 4,
+      "position": Object {
+        "end": Object {
+          "column": 22,
+          "line": 16,
+          "offset": 161,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 16,
+          "offset": 140,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 18,
+              "offset": 180,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 18,
+              "offset": 166,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.2.0",
+        },
+      ],
+      "depth": 2,
+      "position": Object {
+        "end": Object {
+          "column": 18,
+          "line": 18,
+          "offset": 180,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 18,
+          "offset": 163,
+        },
+      },
+      "type": "heading",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 1,
+      "line": 20,
+      "offset": 182,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`TOC function set type of toc to not to mdx 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 3,
+              "offset": 19,
+            },
+            "start": Object {
+              "column": 3,
+              "line": 3,
+              "offset": 4,
+            },
+          },
+          "type": "text",
+          "value": "Headlinge 1.0.0",
+        },
+      ],
+      "depth": 1,
+      "position": Object {
+        "end": Object {
+          "column": 18,
+          "line": 3,
+          "offset": 19,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 2,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 21,
+              "line": 5,
+              "offset": 41,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 5,
+              "offset": 24,
+            },
+          },
+          "type": "text",
+          "value": "Table of Contents",
+        },
+      ],
+      "depth": 2,
+      "position": Object {
+        "end": Object {
+          "column": 21,
+          "line": 5,
+          "offset": 41,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 5,
+          "offset": 21,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "type": "html",
+      "value": "<div class=\\"toc\\">",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Table of Contents",
+                    },
+                  ],
+                  "title": null,
+                  "type": "link",
+                  "url": "#table-of-contents",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "spread": false,
+          "type": "listItem",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Headline 1.1.0",
+                    },
+                  ],
+                  "title": null,
+                  "type": "link",
+                  "url": "#headline-110",
+                },
+              ],
+              "type": "paragraph",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "type": "text",
+                              "value": "Headline 1.1.1",
+                            },
+                          ],
+                          "title": null,
+                          "type": "link",
+                          "url": "#headline-111",
+                        },
+                      ],
+                      "type": "paragraph",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "children": Array [
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "type": "text",
+                                      "value": "Headline 1.1.1.0",
+                                    },
+                                  ],
+                                  "title": null,
+                                  "type": "link",
+                                  "url": "#headline-1110",
+                                },
+                              ],
+                              "type": "paragraph",
+                            },
+                          ],
+                          "spread": false,
+                          "type": "listItem",
+                        },
+                      ],
+                      "ordered": false,
+                      "spread": false,
+                      "type": "list",
+                    },
+                  ],
+                  "spread": true,
+                  "type": "listItem",
+                },
+              ],
+              "ordered": false,
+              "spread": true,
+              "type": "list",
+            },
+          ],
+          "spread": true,
+          "type": "listItem",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "type": "text",
+                      "value": "Headline 1.2.0",
+                    },
+                  ],
+                  "title": null,
+                  "type": "link",
+                  "url": "#headline-120",
+                },
+              ],
+              "type": "paragraph",
+            },
+          ],
+          "spread": false,
+          "type": "listItem",
+        },
+      ],
+      "ordered": false,
+      "spread": true,
+      "type": "list",
+    },
+    Object {
+      "type": "html",
+      "value": "</div>",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 13,
+              "offset": 119,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 13,
+              "offset": 105,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.1.0",
+        },
+      ],
+      "depth": 2,
+      "position": Object {
+        "end": Object {
+          "column": 18,
+          "line": 13,
+          "offset": 119,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 13,
+          "offset": 102,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 19,
+              "line": 15,
+              "offset": 139,
+            },
+            "start": Object {
+              "column": 5,
+              "line": 15,
+              "offset": 125,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.1.1",
+        },
+      ],
+      "depth": 3,
+      "position": Object {
+        "end": Object {
+          "column": 19,
+          "line": 15,
+          "offset": 139,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 15,
+          "offset": 121,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 22,
+              "line": 16,
+              "offset": 161,
+            },
+            "start": Object {
+              "column": 6,
+              "line": 16,
+              "offset": 145,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.1.1.0",
+        },
+      ],
+      "depth": 4,
+      "position": Object {
+        "end": Object {
+          "column": 22,
+          "line": 16,
+          "offset": 161,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 16,
+          "offset": 140,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Object {
+            "end": Object {
+              "column": 18,
+              "line": 18,
+              "offset": 180,
+            },
+            "start": Object {
+              "column": 4,
+              "line": 18,
+              "offset": 166,
+            },
+          },
+          "type": "text",
+          "value": "Headline 1.2.0",
+        },
+      ],
+      "depth": 2,
+      "position": Object {
+        "end": Object {
+          "column": 18,
+          "line": 18,
+          "offset": 180,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 18,
+          "offset": 163,
+        },
+      },
+      "type": "heading",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 1,
+      "line": 20,
+      "offset": 182,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
 exports[`TOC function tight to tight toc 1`] = `
 "# Headlinge 1.0.0
 

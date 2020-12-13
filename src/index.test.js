@@ -245,4 +245,24 @@ describe("TOC function", () => {
 
     expect(data.contents).toEqual(dataPref.contents);
   });
+
+  test("set type of toc to mdx", async () => {
+    let tree = await remark().parse(mdDefaultPrefs());
+
+    let dataPref = await remark()
+      .use(() => toc({ mdx: true }))
+      .run(tree);
+
+    expect(dataPref).toMatchSnapshot();
+  });
+
+  test("set type of toc to not to mdx", async () => {
+    let tree = await remark().parse(mdDefaultPrefs());
+
+    let dataPref = await remark()
+      .use(() => toc({ mdx: false }))
+      .run(tree);
+
+    expect(dataPref).toMatchSnapshot();
+  });
 });
