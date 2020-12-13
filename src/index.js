@@ -35,7 +35,7 @@ const transformer = (markdownAST, pluginOptions) => {
     return;
   }
 
-  let prefs = {
+  const prefs = {
     ...defaultPrefs,
     ...keysToCamel(pluginOptions),
     ...keysToCamel(parsePrefs(markdownAST.children[index].value)),
@@ -69,23 +69,33 @@ const transformer = (markdownAST, pluginOptions) => {
       : prefs.exclude,
   });
 
-  // insert the TOC≤
+  // insert the TOC
   // eslint-disable-next-line
   markdownAST.children = [].concat(
     markdownAST.children.slice(0, index),
     {
-      type: "html",
-      value: `<div class="${prefs.className}">`,
+      type: pluginOptions.mdx ? "jsx" : "html",
+      value: `<div ${pluginOptions.mdx ? "className" : "class"}="${prefs.className}">`,
     },
     result.map,
     {
-      type: "html",
+      type: pluginOptions.mdx ? "jsx" : "html",
       value: "</div>",
     },
     markdownAST.children.slice(index + 1)
   );
 };
 
-export default ({ markdownAST }, pluginOptions) => {
-  return transformer(markdownAST, pluginOptions);
+export default ({
+  markdownAST,
+  markdownNode: {
+    internal: {
+      type
+    } = {}
+  } = {}
+}, pluginOptions) => {
+  return transformer(markdownAST, {
+    mdx: type && type.toLowerCase() === 'mdx',
+    ...pluginOptions
+  });
 };
