@@ -1,6 +1,10 @@
 import { keysToCamel } from "./util/toCamel";
 
 const util = require("mdast-util-toc");
+
+// todo: as soon as js-yaml version 4 is out
+// we can import a three-shaked version
+// https://github.com/nodeca/js-yaml/pull/558
 const yaml = require("js-yaml");
 
 const defaultPrefs = {
