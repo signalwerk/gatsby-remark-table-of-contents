@@ -165,6 +165,7 @@ to-heading: 6
 
 ## Version
 
+- **1.0.0** – FIX: Bugfix when JSX/MDX is used (author: [@zeropaper](https://github.com/zeropaper))
 - **0.2.0** – ADD: Option to set ordered (author: [@thomasjungblut](https://github.com/thomasjungblut))
 - **0.1.0** – ADD: Option to set Class-Name (author: [@panzerdp](https://github.com/panzerdp))
 - **0.0.9** – ADD: Multiple excludes can now be defined by arrays (author: [@signalwerk](https://github.com/signalwerk))
