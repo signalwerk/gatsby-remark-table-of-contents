@@ -75,7 +75,9 @@ const transformer = (markdownAST, pluginOptions) => {
     markdownAST.children.slice(0, index),
     {
       type: pluginOptions.mdx ? "jsx" : "html",
-      value: `<div ${pluginOptions.mdx ? "className" : "class"}="${prefs.className}">`,
+      value: `<div ${pluginOptions.mdx ? "className" : "class"}="${
+        prefs.className
+      }">`,
     },
     result.map,
     {
@@ -86,16 +88,12 @@ const transformer = (markdownAST, pluginOptions) => {
   );
 };
 
-export default ({
-  markdownAST,
-  markdownNode: {
-    internal: {
-      type
-    } = {}
-  } = {}
-}, pluginOptions) => {
+export default (
+  { markdownAST, markdownNode: { internal: { type } = {} } = {} },
+  pluginOptions
+) => {
   return transformer(markdownAST, {
-    mdx: type && type.toLowerCase() === 'mdx',
-    ...pluginOptions
+    mdx: type && type.toLowerCase() === "mdx",
+    ...pluginOptions,
   });
 };
