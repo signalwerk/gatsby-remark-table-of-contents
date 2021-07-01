@@ -22,7 +22,10 @@ npm i --save gatsby-remark-table-of-contents
 ```
 
 ### Global Configuration
+
 Global configurations should be set in `gatsby-config.js`.
+
+**Important**: if you’re also using `gatsby-remark-prismjs` make sure that both `gatsby-remark-autolink-headers` and `gatsby-remark-table-of-contents` are listed **before** `gatsby-remark-prismjs`.
 
 ```js
 module.exports = ({ root }) => ({
@@ -51,6 +54,7 @@ module.exports = ({ root }) => ({
 ```
 
 ## Use
+
 Generate a table of contents:
 
 ````md
@@ -74,6 +78,7 @@ class-name: "table-of-contents"
 ````
 
 ## Options
+
 ### `exclude`
 
 `string? | array?` — default: `''`  
