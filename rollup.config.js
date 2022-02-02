@@ -29,7 +29,7 @@ export default [
     input: "src/index.js",
     external: [],
     output: [
-      { file: pkg.main, format: "cjs", exports: "named" },
+      { file: pkg.main, format: "cjs", exports: "default" },
       { file: pkg.module, format: "es" },
     ],
   },
