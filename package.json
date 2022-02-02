@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-table-of-contents",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Stefan Huber, Signalwerk GmbH",
   "description": "gatsby remark plugin to generate table of contents",
   "keywords": [
