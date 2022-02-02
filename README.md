@@ -85,6 +85,11 @@ If an array is passed the array gets joined with a pipe (`new RegExp('^(' + arra
 `boolean?` — default: `false`  
 Tight list items.
 
+### `mdx`
+
+`boolean?` — default: `false`  
+If MDX is used instead of just Remark
+
 ### `ordered`
 
 `boolean?` — default: `false`  
