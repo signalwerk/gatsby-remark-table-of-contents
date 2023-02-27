@@ -79,7 +79,7 @@ const transformer = (markdownAST, pluginOptions) => {
         {
           type: "heading",
           depth: 3,
-          children: [{ type: "text", value: "목차" }],
+          children: [{ type: "text", value: "Table of Contents" }],
         },
         result.map,
       ],
