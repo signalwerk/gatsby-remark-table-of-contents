@@ -73,17 +73,20 @@ const transformer = (markdownAST, pluginOptions) => {
   // eslint-disable-next-line
   markdownAST.children = [].concat(
     markdownAST.children.slice(0, index),
-    {
-      type: pluginOptions.mdx ? "jsx" : "html",
-      value: `<div ${pluginOptions.mdx ? "className" : "class"}="${
-        prefs.className
-      }">`,
-    },
-    result.map,
-    {
-      type: pluginOptions.mdx ? "jsx" : "html",
-      value: "</div>",
-    },
+    [{
+      type: "parent",
+      children: [
+        {
+          type: "heading",
+          depth: 3,
+          children: [{ type: "text", value: "Table of Contents" }],
+        },
+        result.map,
+      ],
+      data: {
+        hProperties: { className: "toc" },
+      },
+    }],
     markdownAST.children.slice(index + 1)
   );
 };
