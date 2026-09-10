@@ -1,10 +1,7 @@
-import { keysToCamel } from "./util/toCamel";
+const { keysToCamel } = require("./util/toCamel");
 
 const util = require("mdast-util-toc");
 
-// todo: as soon as js-yaml version 4 is out
-// we can import a three-shaked version
-// https://github.com/nodeca/js-yaml/pull/558
 const yaml = require("js-yaml");
 
 const defaultPrefs = {
@@ -17,7 +14,8 @@ const defaultPrefs = {
 
 const parsePrefs = (prefsStrYaml) => {
   try {
-    return yaml.safeLoad(prefsStrYaml);
+    const prefs = yaml.load(prefsStrYaml);
+    return prefs && typeof prefs === "object" && !Array.isArray(prefs) ? prefs : {};
   } catch (e) {
     console.log("Can't parse TOC-Configuration", e);
     return {};
@@ -42,11 +40,11 @@ const transformer = (markdownAST, pluginOptions) => {
   };
 
   // For XSS safety, we only allow basic css names
-  if (!prefs.className.match(/^[ a-zA-Z0-9_-]*$/)) {
+  if (typeof prefs.className !== "string" || !prefs.className.match(/^[ a-zA-Z0-9_-]*$/)) {
     prefs.className = "toc";
   }
 
-  // this ist the ast we nned consider
+  // Build the heading tree for the requested depth range.
   const tocMarkdownAST = {
     ...markdownAST,
     children: [],
@@ -79,7 +77,7 @@ const transformer = (markdownAST, pluginOptions) => {
         prefs.className
       }">`,
     },
-    result.map,
+    ...(result.map ? [result.map] : []),
     {
       type: pluginOptions.mdx ? "jsx" : "html",
       value: "</div>",
@@ -88,9 +86,9 @@ const transformer = (markdownAST, pluginOptions) => {
   );
 };
 
-export default (
+module.exports = (
   { markdownAST, markdownNode: { internal: { type } = {} } = {} },
-  pluginOptions
+  pluginOptions = {}
 ) => {
   return transformer(markdownAST, {
     mdx: type && type.toLowerCase() === "mdx",

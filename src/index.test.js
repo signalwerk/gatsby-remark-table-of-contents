@@ -266,3 +266,20 @@ describe("TOC function", () => {
     expect(dataPref).toMatchSnapshot();
   });
 });
+
+describe("Gatsby 5 regressions", () => {
+  test("supports an empty TOC without inserting null AST children", async () => {
+    const tree = remark().parse("```toc\n```\n\nParagraph only.");
+    gatsbyTOC({ markdownAST: tree });
+    expect(tree.children.every(Boolean)).toBe(true);
+    expect(() => remark().stringify(tree)).not.toThrow();
+  });
+
+  test.each(["class-name: null", "class-name: 42", "just a scalar", "- a\n- list"])(
+    "handles YAML that is not a usable options object: %s", async (options) => {
+      const tree = remark().parse("```toc\n" + options + "\n```\n\n## Heading");
+      expect(() => gatsbyTOC({ markdownAST: tree })).not.toThrow();
+      expect(tree.children[0].value).toBe('<div class="toc">');
+    }
+  );
+});

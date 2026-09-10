@@ -1,10 +1,10 @@
 // convert "in-string" to "inString"
-export const strToCamel = (str) => {
+const strToCamel = (str) => {
   return str.replace(/-(.)/g, (match, chr) => chr.toUpperCase());
 };
 
 // convert "{'in-key': val}" to "{'inKey': val}"
-export const keysToCamel = (obj) => {
+const keysToCamel = (obj) => {
   if (obj) {
     const newObj = {};
     Object.keys(obj).forEach((k) => {
@@ -14,3 +14,5 @@ export const keysToCamel = (obj) => {
   }
   return obj;
 };
+
+module.exports = { strToCamel, keysToCamel };
